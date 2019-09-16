@@ -7,14 +7,34 @@
   "author": "Fuyuno Mikazuki",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev:chrome": "webextension-toolbox dev chrome",
+    "dev:edge": "webextension-toolbox dev edge",
+    "dev:firefox": "webextension-toolbox dev firefox",
+    "build": "webextension-toolbox build"
+  },
+  "dependencies": {
+    "prismjs": "^1.17.1",
+    "webextension-polyfill": "^0.4.0",
+    "webextension-polyfill-ts": "^0.10.0"
+  },
   "devDependencies": {
     "@types/node": "^12.7.5",
+    "@types/webpack": "^4.39.1",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
+    "copy-webpack-plugin": "^5.0.4",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.0"
+    "eslint-plugin-prettier": "^3.1.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
+    "webextension-toolbox": "^3.0.0",
+    "webpack": "^4.40.2",
+    "webpack-watched-glob-entries-plugin": "^2.1.5"
   }
 }
