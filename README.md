@@ -46,4 +46,5 @@ This comment block is generated below content:
 <!-- AUTO_GENERATED_END -->
 ```
 
-If you want to update syntax highlighting, please re-post your blog post.
+If you want to update syntax highlighting, please re-post your blog post.  
+See [this article](https://mikazuki.hatenablog.jp/entry/2019/09/15/153533) for how it was actually generated.
