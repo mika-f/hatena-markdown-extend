@@ -2,6 +2,8 @@
 
 Chrome Extension for Hatena Blog.
 
+> NOTE: This is an experimental project. Please use it at your own risk.
+
 ## Features
 
 This extension append to custom syntax to hatena markdown.
@@ -23,22 +25,25 @@ This is because the theme side of Hatena Blog may use `!important`.
 
 #### Syntax
 
-Add the following block into the HTML comment block (<\!-- HERE -->).  
-Please note that the extension code block uses two backquotes.
+Add the following block into the custom HTML comment block.
 
 ```
-``javascript
-import colors from "colors.css";
-import styled from "styled-components";
+<!-- codegen:typescript
+export type ExtractProps<T> =
+  T extends StyledComponent<any, any, infer R, never> ? R
+  : unknown;
+-->
+```
 
-const Button = styled.button`
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: ${props => props.primary ? colors.blue : colors.silver}
-`;
+This comment block is generated below content:
 
-export default Button;
-``
+```html
+<!-- AUTO_GENERATED_START -->
+<!-- DO NOT EDIT BELOW CONTENTS DIRECTLY (REPLACED WHEN UPDATED CONTENT) -->
+<pre class="language-typescript "><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">type</span> ExtractProps<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span> <span class="token operator">=</span>
+  <span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">StyledComponent</span><span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token punctuation">,</span> infer <span class="token constant">R</span><span class="token punctuation">,</span> <span class="token builtin">never</span><span class="token operator">></span> <span class="token operator">?</span> <span class="token constant">R</span>
+  <span class="token punctuation">:</span> <span class="token builtin">unknown</span><span class="token punctuation">;</span></code></pre>
+<!-- AUTO_GENERATED_END -->
 ```
 
 If you want to update syntax highlighting, please re-post your blog post.
