@@ -1,0 +1,10 @@
+{
+  "name": "@mikazuki/hatena-markdown-extend",
+  "version": "0.1.0",
+  "description": "Chrome Extension for Hatena Blog.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/hatena-markdown-extend",
+  "author": "Fuyuno Mikazuki",
+  "license": "MIT",
+  "private": true
+}
