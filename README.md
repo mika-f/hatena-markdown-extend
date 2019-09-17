@@ -1,4 +1,4 @@
-# Hatena Markdown Extend
+# Refined Hatena Blog
 
 Chrome Extension for Hatena Blog.
 
@@ -6,7 +6,7 @@ Chrome Extension for Hatena Blog.
 
 ## Features
 
-This extension append to custom syntax to hatena markdown.
+This extension implements some improvements to Hatena Blog.
 
 ### Syntax Highlighting
 
@@ -15,7 +15,7 @@ This extension append to custom syntax to hatena markdown.
 Add a custom grammar in the markdown comments and incorporate the code-block drawn with the latest syntax highlight into your blog post.  
 This feature is powered by Prism.js.
 
-#### Prepare
+#### Preparation
 
 1st, download your favorite Prism.js theme from [here](https://github.com/PrismJS/prism/tree/master/themes).  
 ...or also create your own theme.
@@ -25,9 +25,10 @@ This is because the theme side of Hatena Blog may use `!important`.
 
 #### Syntax
 
-Add the following block into the custom HTML comment block.
+Add the your source code into the custom HTML comment block.  
+First line of comment block must start `codegen:language` for using this feature.
 
-```
+```html
 <!-- codegen:typescript
 export type ExtractProps<T> =
   T extends StyledComponent<any, any, infer R, never> ? R
@@ -46,5 +47,5 @@ This comment block is generated below content:
 <!-- AUTO_GENERATED_END -->
 ```
 
-If you want to update syntax highlighting, please re-post your blog post.  
+If you want to update syntax highlighting after posted, please re-post your blog post.  
 See [this article](https://mikazuki.hatenablog.jp/entry/2019/09/15/153533) for how it was actually generated.
